@@ -1,0 +1,26 @@
+{
+  "name": "jwttoken",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.7.2",
+    "amqplib": "^0.10.2",
+    "argon2": "^0.29.1",
+    "beautify-benchmark": "^0.2.4",
+    "benchmark": "^2.1.4",
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "grpc": "^1.24.11",
+    "jsonwebtoken": "^8.5.1",
+    "nodeman": "^1.1.2"
+  }
+}

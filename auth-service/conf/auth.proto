@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package authPackage;
+
+service Auth {
+    rpc register (ReqBody) returns (Result);
+    rpc login (Credentials) returns (LoginResult);
+    rpc refreshToken (RefreshToken) returns (Tokens);
+    rpc isAuthorized (AccessToken) returns (Result);
+    rpc getAll (emptyResult) returns (Result);
+}
+
+message emptyResult {}
+
+message User {
+    string userId = 1;
+    string username = 2;
+}
+
+message ReqBody {
+    string userId = 1;
+    string username = 2;
+    string password = 3;
+}
+
+message Result {
+    int32 status = 1;
+    string message = 2;
+    repeated User users = 3; 
+}
+
+message Credentials {
+    string username = 1;
+    string password = 2;
+}
+
+message RefreshToken {
+    string refreshToken = 1;
+}
+
+message AccessToken {
+    string accessToken = 1;
+}
+
+message Tokens {
+    int32 status = 1;
+    string message = 2;
+}
+
+message LoginResult {
+    int32 status = 1;
+    string message = 2;
+    string username = 3;
+    string refreshToken = 4;
+    string accessToken = 5;
+}
